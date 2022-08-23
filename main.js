@@ -28,14 +28,22 @@ for (let i = 0; i < comments.length; i++) {
                 ${score}
                 <button class="minusPut"> <img class="plusMin1" src="./images/icon-minus.svg"/> </button>
             </div>
-            <button class="replyBut">
-                <img = class="repImage" src="./images/icon-reply.svg"/>
-                <h2 class="repText">Reply</h2>
-            </button>
+            ${username!=="juliusomo" ? `<button class='replyBut'>
+                <img = class='repImage' src='./images/icon-reply.svg/'>
+                <h2 class='repText'>Reply</h2>
+            </button>`: `
+                <div class='youSection'>
+                    <img class='delImage' src='./images/icon-delete.svg'>
+                    <h3 class='delText'>Delete</h3>
+                    <img class='editImage' src='./images/icon-edit.svg'
+                    <h3 class='editText'>Edit</h3>
+                </div>
+            `}
         </div>
     <div>
     `
     //catch each replay and manipulate in DOM
+    
     for (let ani=0; ani<replies.length; ani++){
         const reply = replies[ani];
         const {id, content, createdAt, score, replyingTo, user} = reply;
@@ -60,10 +68,21 @@ for (let i = 0; i < comments.length; i++) {
                         ${score}
                         <button class="minusPut"> <img class="plusMin1" src="./images/icon-minus.svg"/> </button>
                     </div>
-                    <button class="replyBut">
-                        <img = class="repImage" src="./images/icon-reply.svg"/>
-                        <h2 class="repText">Reply</h2>
-                    </button>
+                    ${username!=="juliusomo" ? `<button class='replyBut'>
+                        <img = class='repImage' src='./images/icon-reply.svg'>
+                        <h2 class='repText'>Reply</h2>
+                    </button>`: `
+                    <div class="youSection">
+                        <button class="youEdDe deleteBut">
+                            <img class="delImage" src="./images/icon-delete.svg"/>
+                            <h3 class="delText">Delete</h3>
+                        </button>
+                        <button class="youEdDe editBut">
+                            <img class="editImage" src="./images/icon-edit.svg"/>
+                            <h3 class="editText">Edit</h3>
+                        </button>
+                    </div>
+                    `}
                 </div>
             </div>
         </div?
