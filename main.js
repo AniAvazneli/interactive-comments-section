@@ -39,7 +39,7 @@ for (let i = 0; i < comments.length; i++) {
                     <h3 class='editText'>Edit</h3>
                 </div>
             `}
-        </div>
+        </div>s
     <div>
     `
     //catch each replay and manipulate in DOM
