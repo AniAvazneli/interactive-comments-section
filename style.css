@@ -158,17 +158,12 @@ button {
 
 .hrFor {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
 }
 
-.forLine {
-    width: 2px;
-    height: 100%;
-    background: red;
-}
 
 .lastReply {
-    margin-bottom: 16px;
+    margin-bottom: 0px;
 }
 
 .addCom {
@@ -179,6 +174,7 @@ button {
     padding: 16px;
     padding-bottom: 13px;
     margin-bottom: 32px;
+    margin-top: 16px;
 }
 
 textarea {
@@ -227,6 +223,9 @@ textarea:focus {
     line-height: 24px;
     color: #FFFFFF;
     cursor: pointer;
+    text-align: center;
+    border: 0px;
+    justify-content: center;
 }
 
 .torep {
@@ -308,5 +307,5 @@ textarea:focus {
     background: #FFFFFF;
 }
 .mainRepDiv{
-    outline: 1px solid #5357B6;
+    border-left: 2px solid  #E9EBF0;
 }
