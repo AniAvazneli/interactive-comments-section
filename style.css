@@ -65,6 +65,7 @@ body {
     line-height: 24px;
     color: #67727E;
     text-align: left;
+    word-break: break-all;
 }
 
 .comentBot {
@@ -132,7 +133,6 @@ body {
 }
 
 .replays {
-    height: 280px;
     width: 325px;
     border-radius: 8px;
     background: #FFFFFF;
@@ -298,7 +298,8 @@ textarea:focus {
     color: #5357B6;
     margin-left: 8px;
 }
-.youEdDe{
+
+.youEdDe {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -306,6 +307,116 @@ textarea:focus {
     text-align: center;
     background: #FFFFFF;
 }
-.mainRepDiv{
-    border-left: 2px solid  #E9EBF0;
+
+.mainRepDiv {
+    border-left: 2px solid #E9EBF0;
+}
+
+.delDiv {
+    height: 224px;
+    width: 343px;
+    border-radius: 8px;
+    background: #FFFFFF;
+    display: none;
+    flex-direction: column;
+    text-align: left;
+    padding-top: 24px;
+    padding-left: 27px;
+    padding-right: 28px;
+    position: fixed;
+    transform: translate(0%, 100%);
+    z-index: 10;
+}
+
+.delHeadline {
+    font-family: 'Rubik';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    color: #334253;
+    margin-bottom: 16px;
+}
+
+.depP {
+    font-family: 'Rubik';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #67727E;
+    margin-bottom: 16px;
+    height: 72px;
+    width: 288px;
+}
+
+.delButtons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.noCancel {
+    height: 48px;
+    width: 138px;
+    border-radius: 8px;
+    background: #67727E;
+    align-items: center;
+    font-family: 'Rubik';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+.yesBut {
+    height: 48px;
+    width: 138px;
+    border-radius: 8px;
+    background: #ED6368;
+    align-items: center;
+    font-family: 'Rubik';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+.bgDiv {
+    height: 100vh;
+    width: 100%;
+    mix-blend-mode: normal;
+    position: fixed;
+    display: none;
+    justify-content: center;
+}
+
+.bgDiv::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #000000;
+    opacity: 0.5;
+}
+
+.addComR {
+    margin-top: 16px;
+    background: #FFFFFF;
+    padding: 16px;
+    border-radius: 8px;
+}
+
+.addComRe {
+    width: 325px;
+}
+
+.replayMainCom {
+    width: 280px;
 }
