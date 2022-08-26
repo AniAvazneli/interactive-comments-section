@@ -164,6 +164,7 @@ button {
 
 .lastReply {
     margin-bottom: 0px;
+    margin-top: 10px;
 }
 
 .addCom {
@@ -419,4 +420,15 @@ textarea:focus {
 
 .replayMainCom {
     width: 280px;
+}
+
+.replayOfRep{
+    width: 270px;
+}
+.SecReplayCard{
+    border-top: 5px solid #F5F6FA;
+    margin-top: 13px;
+    padding-top: 5px;
+    width: 300px;
+    transform: translate(5%);
 }
