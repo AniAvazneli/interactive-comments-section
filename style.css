@@ -422,13 +422,43 @@ textarea:focus {
     width: 280px;
 }
 
-.replayOfRep{
+.replayOfRep {
     width: 270px;
 }
-.SecReplayCard{
+
+.SecReplayCard {
     border-top: 5px solid #F5F6FA;
     margin-top: 13px;
     padding-top: 5px;
     width: 300px;
     transform: translate(5%);
 }
+
+.update {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 30px;
+    width: 80px;
+    border-radius: 8px;
+    background: #5357B6;
+    font-family: 'Rubik';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 11px;
+    line-height: 24px;
+    color: #FFFFFF;
+    transform: translate(100%);
+}
+.backPosition{
+    display: flex;
+    transform: translate(-10%);
+}
+.editTextareaR{
+    width: 290px;
+}
+.updateR{
+    transform: translate(0%);
+}
+
