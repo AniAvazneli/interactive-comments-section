@@ -517,10 +517,6 @@ textarea:focus {
         /* transform: translatey(134%); */
     }
 
-    .imageAndSend {
-        transform: translatey(-250%);
-    }
-
     #textArea {
         height: 96px;
         width: 506px;
@@ -534,6 +530,7 @@ textarea:focus {
     .comentBot {
         height: 0px;
     }
+
     .replays {
         transform: translateX(5%);
     }
