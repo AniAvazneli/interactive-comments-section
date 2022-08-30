@@ -168,7 +168,7 @@ button {
 }
 
 .addCom {
-    height: 189px;
+    /* height: 189px; */
     width: 343px;
     border-radius: 8px;
     background: #FFFFFF;
@@ -451,14 +451,90 @@ textarea:focus {
     color: #FFFFFF;
     transform: translate(100%);
 }
-.backPosition{
+
+.backPosition {
     display: flex;
     transform: translate(-10%);
 }
-.editTextareaR{
+
+.editTextareaR {
     width: 290px;
 }
-.updateR{
+
+.updateR {
     transform: translate(0%);
 }
 
+@media screen and (min-width: 1440px) {
+    .mComments {
+        /* height: 167px; */
+        width: 730px;
+    }
+
+    .mainRepDiv {
+        /* height: 167px; */
+        width: 685px;
+        transform: translate(5%);
+    }
+
+    .comments {
+        width: 618px;
+        transform: translate(10%);
+        min-height: 72px;
+    }
+
+    .score {
+        display: flex;
+        flex-direction: column;
+        height: 100px;
+        width: 40px;
+        transform: translateY(-117%);
+        justify-content: space-around;
+    }
+
+    .headInfo {
+        transform: translate(9%);
+    }
+
+    .replyBut {
+        transform: translateY(-650%);
+        height: 20px;
+    }
+
+    .replays {
+        /* height: 167px; */
+        width: 642px;
+    }
+
+    .comments {
+        /* height: 72px; */
+        width: 530px;
+    }
+
+    .addCom {
+        /* height: 144px; */
+        width: 730px;
+        /* transform: translatey(134%); */
+    }
+
+    .imageAndSend {
+        transform: translatey(-250%);
+    }
+
+    #textArea {
+        height: 96px;
+        width: 506px;
+        transform: translateX(-35px);
+    }
+
+    .youSection {
+        transform: translateY(-170%);
+    }
+
+    .comentBot {
+        height: 0px;
+    }
+    .replays {
+        transform: translateX(5%);
+    }
+}

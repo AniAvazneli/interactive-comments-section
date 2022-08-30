@@ -112,7 +112,7 @@ for (let i = 0; i < comments.length; i++) {
         `
         }
         card.innerHTML += `<div class="mainRepDiv">${replies_contents} </div>`
-    }else{
+    } else {
         card.innerHTML += `<div class="mainRepDiv"> </div>`
     }
 
@@ -182,13 +182,12 @@ function yesDelFunc() {
 
 // add replies section to general comments
 window.convertRep = (event, id) => {
-    const button =event.target.parentElement;
-    let gino = true
+    const button = event.target.parentElement;
     button.removeAttribute('disabled');
-    
-    if(!button.disabled){
-    event.target.parentNode.parentNode.parentNode.innerHTML
-    += `
+
+    if (!button.disabled) {
+        event.target.parentNode.parentNode.parentNode.innerHTML
+            += `
         <div class="addComR">
             <textarea class="replayMainCom" id="textArea" rows="4" cols="50" placeholder="Add a replay…"></textarea>
             <div class="imageAndSend">
@@ -198,15 +197,15 @@ window.convertRep = (event, id) => {
         </div>
     `
     }
-    
-    button.setAttribute("disabled", ""); 
+
+    button.setAttribute("disabled", "");
 }
 
 // adds replies section to reply
 window.convertRepR = (event, id) => {
     const ani = event.target.parentElement.parentElement.parentElement.parentElement;
-    ani.innerHTML += 
-    `
+    ani.innerHTML +=
+        `
         <div class="addComR">
             <textarea class="replayOfRep" id="textArea" rows="4" cols="50" placeholder="Add a replay…"></textarea>
             <div class="imageAndSend">
@@ -219,7 +218,7 @@ window.convertRepR = (event, id) => {
 
 
 // creates comments replies
-function addRepToReplies(repliesR, currentDiv){
+function addRepToReplies(repliesR, currentDiv) {
     const { id, content, createdAt, score, replyingTo, user, replies } = repliesR;
     const { image, username } = user;
     currentDiv.innerHTML += `
@@ -270,21 +269,21 @@ function addRepToReplies(repliesR, currentDiv){
 window.convertAndAddReply = (event, id) => {
     let currentDiv = document.getElementById(`${id}`).nextElementSibling;
     let addedReply = document.getElementById("textArea").value;
-    idInex ++ ;
-    let coment = comments.find((element) => element.id==id);
+    idInex++;
+    let coment = comments.find((element) => element.id == id);
     let addedReplyObject = {
         "id": idInex,
-          "content": addedReply,
-          "createdAt": "",
-          "score": 0,
-          "replyingTo": coment.user.username,
-          "user": {
-            "image": { 
-              "png": "./images/avatars/image-juliusomo.png",
-              "webp": "./images/avatars/image-juliusomo.webp"
+        "content": addedReply,
+        "createdAt": "",
+        "score": 0,
+        "replyingTo": coment.user.username,
+        "user": {
+            "image": {
+                "png": "./images/avatars/image-juliusomo.png",
+                "webp": "./images/avatars/image-juliusomo.webp"
             },
             "username": "juliusomo"
-          }
+        }
     };
     coment.replies.push(addedReplyObject);
     let forDel = event.target.parentElement.parentElement;
@@ -293,7 +292,7 @@ window.convertAndAddReply = (event, id) => {
 }
 
 // creates Replies of Replies
-function addRepToRepliesR(repliesR, currentDiv){
+function addRepToRepliesR(repliesR, currentDiv) {
     const { id, content, createdAt, score, replyingTo, user, replies } = repliesR;
     const { image, username } = user;
     currentDiv.innerHTML += `
@@ -347,22 +346,22 @@ window.convertAndAddReplyToReply = (event, id) => {
     let catchRep = event.target.parentElement.parentElement.parentElement.parentElement.parentElement
     let currentComIDCatcher = catchRep.previousElementSibling.getAttribute("id");
     let addedReply = document.getElementById("textArea").value;
-    idInex ++ ;
-    let coment = comments.find((element) => element.id==currentComIDCatcher);
-    let reply = coment.replies.find((element) => element.id==id);
+    idInex++;
+    let coment = comments.find((element) => element.id == currentComIDCatcher);
+    let reply = coment.replies.find((element) => element.id == id);
     let addedReplyObject = {
         "id": idInex,
-          "content": addedReply,
-          "createdAt": "",
-          "score": 0,
-          "replyingTo": reply.user.username,
-          "user": {
-            "image": { 
-              "png": "./images/avatars/image-juliusomo.png",
-              "webp": "./images/avatars/image-juliusomo.webp"
+        "content": addedReply,
+        "createdAt": "",
+        "score": 0,
+        "replyingTo": reply.user.username,
+        "user": {
+            "image": {
+                "png": "./images/avatars/image-juliusomo.png",
+                "webp": "./images/avatars/image-juliusomo.webp"
             },
             "username": "juliusomo"
-          }
+        }
     };
     coment.replies.push(addedReplyObject);
     let forDel = event.target.parentElement.parentElement;
@@ -372,7 +371,7 @@ window.convertAndAddReplyToReply = (event, id) => {
 
 
 // Edit Main Reply
-window.editMainReply = (event) =>{
+window.editMainReply = (event) => {
     let clicksSec = event.target.parentElement.parentElement;
     let scoreButDiv = event.target.parentElement.parentElement.previousElementSibling;
     const textarea = document.createElement("textarea");
@@ -382,13 +381,13 @@ window.editMainReply = (event) =>{
     toxTo.replaceWith(textarea);
     // console.log(currentDiv);
     scoreButDiv.style.display = "none";
-    clicksSec.innerHTML +=`<button class="update" onclick="convertBack(event)" >UPDATE</button>`
+    clicksSec.innerHTML += `<button class="update" onclick="convertBack(event)" >UPDATE</button>`
 }
 
 // Edited Main convertBack
-window.convertBack = (event) =>{
+window.convertBack = (event) => {
     let editedComment = document.querySelector(".editTextarea");
-    idInex++ ;
+    idInex++;
     let editedcommentObject = {
         "id": idInex,
         "content": editedComment.value,
@@ -414,10 +413,10 @@ window.convertBack = (event) =>{
 }
 
 // Edit child Reply
-window.editReply = (element) =>{
+window.editReply = (element) => {
     let clicksSec = element.parentElement.parentElement;
     // console.log(element.parentElement.parentElement.previousElementSibling);
-    
+
     let scoreButDiv = element.parentElement.previousElementSibling;
     scoreButDiv.style.display = "none";
     // console.log(element)
@@ -425,15 +424,15 @@ window.editReply = (element) =>{
     textarea.classList.add("editTextarea");
     let toxTo = element.parentElement.parentElement.previousElementSibling;
     textarea.value = toxTo.textContent;
-    clicksSec.innerHTML +=`<button class="update updateR" onclick="convertBackReply(event)">UPDATE</button>`
+    clicksSec.innerHTML += `<button class="update updateR" onclick="convertBackReply(event)">UPDATE</button>`
     toxTo.replaceWith(textarea);
     // console.log(element);
 }
 
 // Edited Main convertBack
-window.convertBackReply = (event) =>{
+window.convertBackReply = (event) => {
     let editedComment = document.querySelector(".editTextarea");
-    idInex++ ;
+    idInex++;
     let editedcommentObject = {
         "id": idInex,
         "content": editedComment.value,
@@ -462,26 +461,26 @@ window.convertBackReply = (event) =>{
 
 
 
-let clicked = true ;
+let clicked = true;
 let clickedM = true;
 
-    window.plus = (e)=>{
-        if (clicked){
+window.plus = (e) => {
+    if (clicked) {
         const scoreCount = e.nextElementSibling.innerHTML;
-        const addOne = Number(scoreCount)+1;
+        const addOne = Number(scoreCount) + 1;
         e.nextElementSibling.innerHTML = addOne;
-        clicked=false;
-        clickedM=true;
+        clicked = false;
+        clickedM = true;
     }
-    
+
 }
 
-window.minus = (e)=>{
-    if (clickedM){
-    const scoreCount = e.previousElementSibling.innerHTML;
-    const addOne = Number(scoreCount)-1;
-    e.previousElementSibling.innerHTML = addOne;
-    clickedM=false;
-    clicked=true;
-}
+window.minus = (e) => {
+    if (clickedM) {
+        const scoreCount = e.previousElementSibling.innerHTML;
+        const addOne = Number(scoreCount) - 1;
+        e.previousElementSibling.innerHTML = addOne;
+        clickedM = false;
+        clicked = true;
+    }
 }
